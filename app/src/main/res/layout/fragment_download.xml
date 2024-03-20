@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_darker"
+    tools:context=".ui.download.DownloadFragment">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/dl_song_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="4dp"
+        android:scrollbars="vertical" />
+
+    <TextView
+        android:id="@+id/default_background_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:text="@string/dl_default_background_text"
+        android:textAlignment="center"
+        android:textColor="@color/grey_lighter"
+        android:textSize="20sp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/dl_start_new"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginVertical="15dp"
+        app:backgroundTint="@color/green"
+        app:srcCompat="@android:drawable/ic_input_add" />
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/dl_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="100dp"
+        android:layout_marginVertical="15dp"
+        android:gravity="center"
+        android:text="START"
+        android:alpha="0"
+        android:textSize="16sp"
+        app:backgroundTint="@color/green_lighter" />
+
+
+</RelativeLayout>

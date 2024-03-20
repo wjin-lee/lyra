@@ -1,0 +1,22 @@
+<resources>
+    <!--NAVIGATIONAL COMPONENTS-->
+    <string name="menu_home">Home</string>
+    <string name="menu_download">Download</string>
+    <string name="menu_playlist">Playlists</string>
+
+    <string name="app_name">Music Manager</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Music Manager</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <!--HOME FRAGMENT-->
+<!--    <string name="hm_welcome_text">Welcome</string>-->
+
+
+    <!--DOWNLOAD FRAGMENT-->
+    <string name="dl_default_background_text">Click the + button \n to start a new download!</string>
+
+</resources>

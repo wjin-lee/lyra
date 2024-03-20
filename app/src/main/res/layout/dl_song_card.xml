@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="@color/grey_darker"
+    app:cardCornerRadius="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="1">
+
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.65"
+            android:layout_margin="4dp"
+            android:background="#00FFFFFF">
+
+            <ImageView
+                android:id="@+id/thumbnail"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerVertical="true"
+                android:layout_marginHorizontal="5dp"
+                android:contentDescription="thumbnail" />
+
+            <TextView
+                android:id="@+id/track_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@id/thumbnail"
+                android:paddingHorizontal="2dp"
+                android:text="Title"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:maxLines="1"
+                android:ellipsize="end"/>
+
+            <TextView
+                android:id="@+id/track_artists"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/track_title"
+                android:layout_marginStart="4dp"
+                android:layout_toEndOf="@id/thumbnail"
+                android:paddingTop="2dp"
+                android:text="Artist 1, Artist 2"
+                android:textColor="@color/grey_lighter"
+                android:textSize="15sp"
+                android:maxLines="1"
+                android:ellipsize="end"/>
+
+            <TextView
+                android:id="@+id/track_album"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/track_artists"
+                android:layout_marginStart="4dp"
+                android:layout_marginLeft="0dp"
+                android:layout_toEndOf="@id/thumbnail"
+                android:layout_toRightOf="@id/thumbnail"
+                android:text="album"
+                android:textColor="@color/grey_lighter"
+                android:textSize="15sp"
+                android:maxLines="1"
+                android:ellipsize="end"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.35"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/variation"
+                    android:layout_width="45dp"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:text="-"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/link_popup_btn"
+                    app:layout_constraintHorizontal_chainStyle="spread"
+                    />
+
+                <ImageButton
+                    android:id="@+id/link_popup_btn"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_youtube_music"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintLeft_toRightOf="@id/variation"
+                    app:layout_constraintRight_toLeftOf="@id/status_icon"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <ImageView
+                    android:id="@+id/status_icon"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/ic_searching"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/link_popup_btn"
+                    app:layout_constraintRight_toRightOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
